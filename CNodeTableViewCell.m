@@ -3,7 +3,6 @@
 //  DNApp
 //
 //  Created by cheshire on 2/21/15.
-//  Copyright (c) 2015 Meng To. All rights reserved.
 //
 
 #import "CNodeTableViewCell.h"

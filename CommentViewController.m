@@ -3,7 +3,7 @@
 //  DNApp
 //
 //  Created by cheshire on 2/22/15.
-//  Copyright (c) 2015 Meng To. All rights reserved.
+//  Copyright (c) 2015 cheshire. All rights reserved.
 //
 
 #import "CommentViewController.h"

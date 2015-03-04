@@ -21,6 +21,8 @@
 @property (nonatomic,strong) TopicModel *topic;
 @property (nonatomic) NSInteger currentClickIndex;
 @property (nonatomic,strong) CNodeTableViewCell* prototypeCell;
+@property (nonatomic,strong) RACSubject *tokenChecker;
+@property (nonatomic,strong) RACSignal *enableSignal;
 //@property (strong, nonatomic) NSMutableDictionary *offscreenCells;
 
 @end
@@ -50,6 +52,22 @@
     [super viewDidLoad];
     self.currentClickIndex = -1;
     [self LoadTopicById:self.topicId];
+    
+    //check button enabled?
+    self.tokenChecker = [RACSubject subject];
+    self.enableSignal = [RACSignal combineLatest:@[self.tokenChecker]
+                                              reduce:^(NSString *ctoken){
+                                                  return @(ctoken.length>0);
+                                              }];
+    RACCommand *replyCommand = [[RACCommand alloc] initWithEnabled:self.enableSignal signalBlock:^RACSignal *(id input) {
+        //
+        self.currentClickIndex = -1;
+        [self performSegueWithIdentifier:@"detailToComment" sender:self.topic];
+        return [RACSignal empty];
+    }];
+    [self.tokenChecker sendNext:[[CNJSManger sharedManager] getAccessTokenFromKC] ];
+    
+    self.replyButtonItem.rac_command = replyCommand;
     
 }
 
@@ -261,7 +279,8 @@
     NSLog(@"indexpath.row is %ld",(long)indexPath.row);
     //TopicModel *model =[self.topics objectAtIndex:indexPath.row];
     //[self performSegueWithIdentifier:@"homeToDetail" sender:model.topic_id];
-    if(indexPath.row != 0){
+    NSLog(@"%d",self.replyButtonItem.enabled);
+    if(indexPath.row != 0 && self.replyButtonItem.enabled){
         //just the reply cells
         UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Close" destructiveButtonTitle:nil otherButtonTitles:@"Reply",@"Star", nil];
         [actionSheet showInView:self.view];

@@ -103,7 +103,19 @@
     ACSimpleKeychain *keychain = [ACSimpleKeychain defaultKeychain];
     NSDictionary *credentials = [keychain credentialsForUsername:@"token" service:@"CNodeJS"];
     return [credentials valueForKey:ACKeychainIdentifier];
+    
 }
+
+//-(RACSignal*)buttonEnabledCheck{
+//    RACSubject *tokenSubject = [RACSubject subject];
+//    
+//    RACSignal* combinedSignal =  [RACSignal combineLatest:@[tokenSubject]
+//                             reduce:^(NSString* ctoken){
+//                                 return @(ctoken.length > 0);
+//                             }];
+//    [tokenSubject sendNext:[self getAccessTokenFromKC]];
+//    return combinedSignal;
+//}
 
 - (RACSignal*)checkAccessToken{
     //hard code now @"7c7e6f7f-2fc6-426c-a804-2dab5a0bb062"

@@ -35,7 +35,7 @@
 - (RACSignal*)getUserInfoByName;
 - (RACSignal*)checkAccessToken;
 - (RACSignal*)setAccessTokenByQRScaner:(NSString*)result;
-
+- (NSString*)getAccessTokenFromKC;
 - (void)clearContents;
 
 

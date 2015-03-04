@@ -489,9 +489,6 @@ Then we fix them.</string>
                     <navigationItem key="navigationItem" id="Abh-jd-vCD">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="reply" id="teT-1E-EpW">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="replyDidPressed:" destination="SSj-ei-Krx" id="GzU-Qj-2yM"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
