@@ -1,0 +1,64 @@
+PODS:
+  - ACSimpleKeychain (0.0.1)
+  - AFNetworking (2.0.3):
+    - AFNetworking/NSURLConnection (= 2.0.3)
+    - AFNetworking/NSURLSession (= 2.0.3)
+    - AFNetworking/Reachability (= 2.0.3)
+    - AFNetworking/Security (= 2.0.3)
+    - AFNetworking/Serialization (= 2.0.3)
+    - AFNetworking/UIKit (= 2.0.3)
+  - AFNetworking/NSURLConnection (2.0.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.0.3):
+    - AFNetworking/NSURLConnection
+  - AFNetworking/Reachability (2.0.3)
+  - AFNetworking/Security (2.0.3)
+  - AFNetworking/Serialization (2.0.3)
+  - AFNetworking/UIKit (2.0.3):
+    - AFNetworking/NSURLConnection
+  - Canvas (0.1.1)
+  - Mantle (1.5.4):
+    - Mantle/extobjc (= 1.5.4)
+  - Mantle/extobjc (1.5.4)
+  - NSDate+TimeAgo (1.0.3)
+  - ReactiveCocoa (2.4.7):
+    - ReactiveCocoa/UI (= 2.4.7)
+  - ReactiveCocoa/Core (2.4.7):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.4.7)
+  - ReactiveCocoa/UI (2.4.7):
+    - ReactiveCocoa/Core
+  - SDWebImage (3.6):
+    - SDWebImage/Core (= 3.6)
+  - SDWebImage/Core (3.6)
+  - SOCKit (1.1)
+  - TPKeyboardAvoiding (1.2.3)
+  - TTTAttributedLabel (1.10.0)
+
+DEPENDENCIES:
+  - ACSimpleKeychain
+  - AFNetworking
+  - Canvas
+  - Mantle
+  - NSDate+TimeAgo (~> 1.0.2)
+  - ReactiveCocoa
+  - SDWebImage (~> 3.5)
+  - SOCKit (~> 1.1)
+  - TPKeyboardAvoiding
+  - TTTAttributedLabel
+
+SPEC CHECKSUMS:
+  ACSimpleKeychain: 5a471ccf5c85d23dcb603e9690b448832b892433
+  AFNetworking: a4d0e9a64de9242986620dafd1b3cee3b413ac5c
+  Canvas: 45356a2e61087a776bfde5090676d290cf67f7f2
+  Mantle: d5fbaf30fbc58031223af13812c060e15934a1fe
+  NSDate+TimeAgo: f3533e0198fab05b716368b19f8c2185d53d6f3b
+  ReactiveCocoa: 313fc53cc9aeb2bbbc3f5f13c7eac16478d9af8f
+  SDWebImage: c6989652c1cdf27cbdf3f56957e2030f825af5bc
+  SOCKit: d8d0dd3688ae1026c12367570da8fa8e1a6980fb
+  TPKeyboardAvoiding: ca26afa683d829cb96fe69b887fc8be4178f0b9a
+  TTTAttributedLabel: c3a11b538bc7beb4815f156e2ba4b066929e13f9
+
+COCOAPODS: 0.35.0
